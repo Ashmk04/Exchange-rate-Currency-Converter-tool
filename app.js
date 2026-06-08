@@ -23,6 +23,7 @@ for(let select of dropdowns){
 }
 
 
+
 const updateFlag = ((element) =>{
     let currCode = element.value;
     let countryCode = countryList[currCode];
@@ -40,11 +41,16 @@ button.addEventListener( "click" ,async(evt)=>{
     const toCurr = document.querySelector(".to select").value;
     // console.log(fromCurr);
     // console.log(toCurr);
-    URL = `https://api.frankfurter.dev/v1/latest?amount=${amtVal}&from=${fromCurr}&to=${toCurr}`;
+    if (amtVal === "" || amtVal < 1) {
+        amtVal = 1;
+        amount.value = "1";
+    }
+    const URL = `https://api.frankfurter.dev/v1/latest?amount=${amtVal}&from=${fromCurr}&to=${toCurr}`;
     let response = await fetch(URL);
     let data = await response.json();
-    let rate = data.rates[toCurr];
-    let finalAmt = amtVal * rate;
+    //let rate = data.rates[toCurr];
+    //let finalAmt = amtVal * rate;
+    let finalAmt = data.rates[toCurr];
     // console.log(finalAmt);
     result.innerText = `${amtVal} ${fromCurr} = ${finalAmt} ${toCurr}`;
 });
