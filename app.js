@@ -48,9 +48,9 @@ button.addEventListener( "click" ,async(evt)=>{
     const URL = `https://api.frankfurter.dev/v1/latest?amount=${amtVal}&from=${fromCurr}&to=${toCurr}`;
     let response = await fetch(URL);
     let data = await response.json();
-    //let rate = data.rates[toCurr];
-    //let finalAmt = amtVal * rate;
-    let finalAmt = data.rates[toCurr];
+    let rate = data.rates[toCurr];
+    let finalAmt = amtVal * rate;
+    //let finalAmt = data.rates[toCurr];
     // console.log(finalAmt);
     result.innerText = `${amtVal} ${fromCurr} = ${finalAmt} ${toCurr}`;
 });
