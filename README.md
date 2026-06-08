@@ -5,9 +5,16 @@
 [![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-
 A simple Currency Converter web application built using HTML, CSS, and JavaScript.  
 It uses a Currency Exchange Rate API to convert currencies in real time.
+
+---
+
+## 🖥️ Live Preview
+
+> **[ashmk04.github.io]()**
+
+---
 
 ## Features
 - Real-time currency conversion
