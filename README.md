@@ -1,6 +1,6 @@
 # Currency Converter 💱
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-38E8C5?style=flat-square)]()
+[![Live Demo](https://img.shields.io/badge/Live-Demo-38E8C5?style=flat-square)](https://ashmk04.github.io/Exchange-rate-Currency-Converter-tool/)
 [![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -12,7 +12,7 @@ It uses a Currency Exchange Rate API to convert currencies in real time.
 
 ## 🖥️ Live Preview
 
-> **[ashmk04.github.io]()**
+> **[ashmk04.github.io](https://ashmk04.github.io/Exchange-rate-Currency-Converter-tool/)**
 
 ---
 
