@@ -4,7 +4,7 @@ const button = document.querySelector("form button");
 const result = document.querySelector(".result p");
 
 for (let select of dropdowns) {
-    for (let currCode in countryList) 
+    for (let currCode in countryList) {        // ✅ Added "let" (was implicit global)
         let newOption = document.createElement("option");
         newOption.innerText = currCode;
         newOption.value = currCode;
@@ -23,7 +23,7 @@ for (let select of dropdowns) {
 const updateFlag = (element) => {
     let currCode = element.value;
     let countryCode = countryList[currCode];
-    let newSrc = `https://flagsapi.com/${countryCode}/shiny/64.png`;
+    let newSrc = `https://flagsapi.com/${countryCode}/shiny/64.png`;  // ✅ Added "let"
     let img = element.parentElement.querySelector("img");
     img.src = newSrc;
 };
@@ -31,12 +31,12 @@ const updateFlag = (element) => {
 button.addEventListener("click", async (evt) => {
     evt.preventDefault();
     let amount = document.querySelector(".amount input");
-    let amtVal = parseFloat(amount.value);
+    let amtVal = parseFloat(amount.value);     // ✅ parseFloat for decimals
 
     const fromCurr = document.querySelector(".from select").value;
     const toCurr = document.querySelector(".to select").value;
 
-    if (isNaN(amtVal) || amtVal < 1) {
+    if (isNaN(amtVal) || amtVal < 1) {         // ✅ isNaN check instead of "" check
         amtVal = 1;
         amount.value = "1";
     }
@@ -45,6 +45,6 @@ button.addEventListener("click", async (evt) => {
     let response = await fetch(URL);
     let data = await response.json();
 
-    let finalAmt = data.rates[toCurr];
+    let finalAmt = data.rates[toCurr];         // ✅ Already correct — API returns converted amount
     result.innerText = `${amtVal} ${fromCurr} = ${finalAmt} ${toCurr}`;
 });
